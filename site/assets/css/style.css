@@ -82,17 +82,45 @@ h1{
     font-size: 24px;
     font-weight: 600;
     line-height: 140%;
-    letter-spacing: -2.5%;
+    letter-spacing: -.025em;
+}
+h2{
+    font-family: "Pretendard";
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: -.025em;
+    margin-bottom: 25px;
 }
 a{
     font-family: "Pretendard";
     font-size: 24px;
     font-weight: 600; 
     line-height: 140%;
-    letter-spacing: -2.5%;
+    letter-spacing: -.025em;
+}
+p{
+    font-family: "Pretendard";
+    font-size: 16px;
+    font-weight: 500; 
+    line-height: 140%;
+    letter-spacing: -.025em;
+    color: #767676;
 }
 
+.sec-padding{
+    padding: 100px 0;
+}
 
+.content-textTitle{
+    width: 408px;
+    margin: auto auto 80px auto;
+    text-align: center;
+}
+
+.mt-27{
+    margin-top: 27px;
+}
 
 .slider{
     width: 100%;
@@ -149,18 +177,23 @@ a{
     a{
         font-size: 18px;
     }
-}
 
-@media(max-width:768px){
-    .f-d-column{
-        flex-direction: column;
-        padding: 0 10px;
+    .w-1316{
+        width: 1110px;
+        margin: auto;
     }
-    .gap{
-        gap: 10px 0;
+    .content-textTitle{
+        margin: auto auto 50px auto;
     }
-    .column-4{
-        width: 100%;
+    h2{
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+    .mt-27{
+        margin-top: 20px;
+    }
+    .sec-padding{
+        padding: 80px 0;
     }
 }
 
@@ -171,11 +204,69 @@ a{
     .mobile{
         display: block;
     }
+
+    .f-d-column{
+        flex-direction: column;
+    }
+    .gap{
+        gap: 35px 0;
+    }
+    .column-4{
+        width: 100%;
+    }
+
+    .w-1316{
+        width: 690px;
+        margin: auto;
+    }
+    .content-textTitle{
+        margin: auto auto 40px auto;
+    }
+    h2{
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    p{
+        font-size: 15px;
+    }
+    .mt-27{
+        margin-top: 20px;
+    }
+    .sec-padding{
+        padding: 60px 0;
+    }
 }
+
+
 
 @media(max-width:576px){
     nav{
         width: 90%;
+    }
+
+    .w-1316{
+        width: 540px;
+        margin: auto;
+    }
+    .content-textTitle{
+        margin: auto auto 25px auto;
+    }
+    h2{
+        font-size: 18px;
+        letter-spacing: 0;
+        margin-bottom: 12px;
+    }
+    p{
+        font-size: 12px;
+    }
+    .mt-27{
+        margin-top: 15px;
+    }
+    .sec-padding{
+        padding: 40px 0;
+    }
+    .row{
+        padding: 0 20px;
     }
 }
 
