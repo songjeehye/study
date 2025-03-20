@@ -1,0 +1,160 @@
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 900;
+    src: url(pre/Pretendard-Black.woff) format('woff');
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 800;
+    src: url(pre/Pretendard-ExtraBold.woff) format('woff');
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 700;
+    src: url(pre/Pretendard-Bold.woff) format('woff');
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 600;
+    src: url(pre/Pretendard-SemiBold.woff) format('woff');
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 500;
+    src: url(pre/Pretendard-Medium.woff) format('woff');
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 400;
+    src: url(pre/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 300;
+    src: url(pre/Pretendard-Light.woff) format('woff');
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 200;
+    src: url(pre/Pretendard-ExtraLight.woff) format('woff');
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 100;
+    src: url(pre/Pretendard-Thin.woff) format('woff');
+}
+
+.d-flex{
+    display: flex;
+}
+
+nav{
+    width: 1774px;
+    margin: 0 auto;
+    padding: 26px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navi{
+    gap: 0 48px;
+    /* "display: grid, display: flex"에만 활용할 수 있는 여백 조정 속성 */
+}
+.navi a{
+    text-decoration: none;
+    color: #000;
+}
+
+.icon ul{
+    gap: 0 11px;
+}
+.mobile{
+    display: none;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    font-family: "Pretendard";
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: -2.5%;
+}
+a{
+    font-family: "Pretendard";
+    font-size: 24px;
+    font-weight: 600; 
+    line-height: 140%;
+    letter-spacing: -2.5%;
+}
+
+
+/* 반응형 */
+
+@media(max-width:1280px){
+    .ta-pc{
+        display: none;
+    }
+    .navi{
+        gap: 0 25px;
+    }
+    nav{
+        justify-content: space-between;
+        padding: 24px 0;
+        width: 90%;
+    }
+    h1{
+        font-size: 18px;
+    }
+    a{
+        font-size: 18px;
+    }
+}
+
+@media(max-width:768px){
+
+
+    .navi{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+}
+
+@media(max-width:576px){
+    nav{
+        width: 90%;
+    }
+}
+
+/*
+@media(max-width:NNNpx){ }
+>> 해당 width값에 도달하면 { } 속성 적용
+( ex. ".ta-pc{display: none;}" = 해당 width값에 도달하면 노출 제외_노출: block )
+( ex. ".navi{gap: 0 25px;}" = 해당 width값에 도달하면 gap 25px로 변경)
+*/
+
+/*@media(min-width:600px){
+    body{
+        background-color: blue;
+    }
+}*/
+
+/*
+@media(min-width:NNNpx){ }
+>> 해당 width값에 도달하기 전까지 { } 속성 적용
+( ex. "body{background-color: blue;}" = 해당 width값에 도달하기 전까지 bg-color blue로 유지, 해당 width값에 도달 시 bg-color 제외)
+*/
+
+/* @media(min-width:768px) and (max-width:1024px){
+    body{
+        background-color: blue;
+    }   
+}
+위 size 태블릿 구간_태블릿 구간 내에서는 아래 속성을 적용한다
+"screen and: 원래는 기재 항목, only screen and: 예전 브라우저별 구분 목적 */
