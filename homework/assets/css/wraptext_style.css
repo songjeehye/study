@@ -1,0 +1,50 @@
+@import url('https:fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #7d2ae8;
+}
+
+.wrapper{
+    margin: 150px auto;
+    width: 70%;
+}
+
+img{
+    max-width: 320px;
+    float: left;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    margin-right: 30px;
+}
+
+.text-box{
+    color: #fff;
+}
+.text-box h2{
+    font-size: 42px;
+}
+.text-box p{
+    font-size: 16px;
+}
+
+
+/*
+.d-flex{
+    display: flex;
+}
+img{
+    max-height: 230px;
+}
+*/
+/* .wrapper 내 img 및 text를 감싼 div에 flex 적용 시,
+화면 크기를 줄였을 때 텍스트가 밑으로 내려가지 않음 */
