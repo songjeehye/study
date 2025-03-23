@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.service{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px 9%;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    color: #333;
+    text-align: center;
+}
+
+/*
+"linear-gradient"는 색깔에 관련된 속성이지만, 'background-color'가 아닌 'background' 또는 'background-image'의 속성에 속한다.
+[ "linear-gradient" 사용 방법 ]
+1. direction 또는 angle
+- direction : 'to'를 통해 'left, right, top, bottom' 조합하여 그라데이션 선의 방향 지정
+(수평선 >> 'to left', 'to right')
+(수직선 >> 'to top', 'to bottom')
+(대각선 >> 'to left bottom', 'to right top'...)
+- angle : 'deg' 각도 단위를 통해 그라데이션 선의 방향 지정, 각도가 커질수록 시계 방향으로 선의 축 이동
+(0deg = 'to top', 90deg = 'to right', 135deg = 'to right bottom', 180deg = 'to bottom', 225deg = 'to left bottom', 270deg = 'to left', 315deg = 'to left top') *값 미지정 시, 기본값 'to bottom'*
+2. color-stop
+- 색깔과 색깔의 위치 지정, 색깔(이름, RGB(A), HSL(A) 등), 색깔의 위치는 %, px 등으로 표현
+*/
+
+.heading{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/*
+Flex는 한 반향 레이아웃 시스템 (1차원),
+Grid는 두 방향(가로세로) 레이아웃 시스템 (2차원)
+
+부모 요소를 "Grid Container", 자식 요소를 "Grid Item"
+: 컨테이너가 Grid 영향을 받는 전체 공간이며, 설정된 속성에 따라 각각의 아이템들이 어떤 형태로 배치되는 것!
+
+Grid의 속성들은 Flex와 마찬가지로 하기와 같이 나뉜다.
+1. 컨테이너에 적용하는 속성
+2. 아이템에 적용하는 속성
+
+* "display: inline-grid;"은 'inline block'처럼 동작 *
+
+Grid의 형태 정의 (컨테이너에 Grid Track의 크기들을 지정해주는 속성)
+- grid-template-rows
+- grid-template-columns
+크기 지정 단위 : auto, px, fr(fraction=숫자 비율대로 트랙의 크기 분할, ex. "1fr 1fr 1fr"=1:1:1 비율 분할/"100px 2fr 1fr"=100px열과 나머지 2개의 열은 2:1비율로 분할)
+
+repeat (반복되는 값을 자동으로 처리할 수 있는 함수)
+- repeat (반복회수, 반복값)
+ex. "repeat(5, 1fr)"=1fr 1fr 1fr 1fr 1fr
+
+minmax (최소값과 최대값 지정할 수 있는 함수)
+ex. "minmax (100px, auto)"=최소100px, 최대는 자동으로 늘어나게
+
+auto-fill 과 auto-fit (column의 개수를 미리 정하지 않고 설정된 너비가 허용하는 한 최대한 셀을 채운다.)
+- auto-fill : 셀이 부족할 경우 빈 공간 발생
+- auto-fit : 셀이 부족할 경우 빈 공간 채워줌
+*/
+
+.wrapper .box{
+    padding: 30px 20px;
+    background: #fff;
+    border-radius: 10px;
+    transition: .5s;
+}
+.wrapper .box:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+}
+.box i{
+    font-size: 60px;
+    color: #7484ec;
+}
+.box h2{
+    font-size: 25px;
+}
+.box p{
+    margin: 10px 0 18px;
+}
+.box .btn{
+    display: inline-block;
+    padding: 8px 20px;
+    background: #7494ec;
+    border: 2px solid #7494ec;
+    border-radius: 6px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: .5s;
+}
+.box .btn:hover{
+    background: transparent;
+    color: #7494ec;
+}
+
+@media screen and (max-width: 992px) {
+    .service{
+        padding: 20px 5%;
+    }
+}
+@media screen and (max-width: 350px) {
+    .wrapper{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
