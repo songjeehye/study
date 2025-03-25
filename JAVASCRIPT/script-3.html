@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let a = true;
+        let b = false;
+
+        // && (두 값이 모두 "true"면 "true")
+        document.write(a && a);
+        document.write("<hr>");
+        document.write(a && b);
+        document.write("<hr>");
+        document.write(b && a);
+        document.write("<hr>");
+        document.write(b && b);
+        document.write("<hr>");
+        // || (두 값 중 하나라도 "true"면 "true")
+        document.write("<hr>");
+        document.write(a || a);
+        document.write("<hr>");
+        document.write(a || b);
+        document.write("<hr>");
+        document.write(b || a);
+        document.write("<hr>");
+        document.write(b || b);
+
+        document.write("<hr>");
+        document.write("<hr>");
+
+
+        // &= (비트 AND 연산자_둘 다 1일때 1, 나머지 0)
+        let c = 5;
+        c &= 3;
+        document.write(c);
+
+        document.write("<hr>");
+
+        // |= (비트 OR 연산자_둘 중 하나라도 1이면 1)
+        let d = 5;
+        d |= 3;
+        document.write(d);
+
+        document.write("<hr>");
+        document.write("<hr>");
+
+        // &&= 예제 (왼쪽 값이 "true"일 경우에만, 오른쪽 값을 할당)
+        let x = true;
+        x &&= false;
+        document.write(x);
+        document.write("<hr>");
+        let y = false;
+        y &&= true;
+        document.write(y);
+        document.write("<hr>");
+        let m = true;
+        m &&= true;
+        document.write(m);
+
+        document.write("<hr>");
+        document.write("<hr>");
+
+        // ||= 예제 (왼쪽 값이 "false"일 경우에만, 오른쪽 값을 할당)
+        let u = null;
+        u ||= "hello";
+        document.write(u);
+        document.write("<hr>");
+        let p = "Hello";
+        p ||= "world";
+        document.write(p);
+
+        document.write("<hr>");
+        document.write("<hr>");
+
+
+        // >>=, >>>= (오른쪽 시프트)
+
+        // 양수일 경우
+        let f = 8;
+        f >>= 2;
+        document.write(f);
+        document.write("<hr>");
+        let g = 8;
+        g >>>= 2;
+        document.write(g);
+
+        document.write("<hr>");
+        document.write("<hr>");
+
+        // 음수일 경우
+        let k = -8;
+        k >>= 2;
+        document.write(k);
+        document.write("<hr>");
+        let h = -8;
+        h >>>= 2;
+        document.write(h);
+
+
+        document.write("<hr>");
+        document.write("<hr>");
+
+
+        // ^= (XOR 연산_두 비트가 다르면 1, 두 비트가 같으면 0)
+        let s = 5;
+        s ^= 3;
+        document.write(s);
+
+    </script>
+
+</body>
+</html>
