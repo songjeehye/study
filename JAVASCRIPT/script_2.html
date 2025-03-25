@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    
+    <script>
+
+        // let length = 16;
+        // let weight = 7.5;
+
+        // let color = "yellow";
+        // let lastName = "hyun";
+
+        // const person = {
+        //     firstName:"jeehye", 
+        //     lastName: "Song",
+        //     br:"<br>",
+        //     age: 32
+        // };
+        // //객체(objects) {} 중괄호 사용
+        // document.write(person.lastName+person.firstName+person.br+person.age);
+
+
+        // const car = ["BMW", "캐스퍼", "테슬라"];
+        // //배열(arrays) 0, 1, 2 숫자로 받아들임 [] 대괄호 사용
+        // document.write("<br>"+car[0])
+
+
+        const date = new Date();
+        const year = date.getFullYear(); // 년도
+        const month = date.getMonth(); // 월
+        const today = date.getDate(); // 날짜
+        const day = date.getDay(); // 요일
+
+        //d-day 계산
+        const targetDate = new Date('2025-12-25');
+        const difDay = date - targetDate;
+        document.write(difDay);
+
+        document.write("<br>" + date);
+        // year, month, day, hour, minute, second, millisecond
+        // 함수는 변수 선언 후 해당 변수를 가져오는 형식
+        document.write("<hr>");
+        document.write("현재년도 :" + year);
+        document.write("<hr>");
+        document.write("현재 월 :" + month);
+        document.write("<hr>");
+        document.write("오늘날짜 :" + today);
+        document.write("<hr>");
+        document.write("오늘요일 :" + day);
+        
+        document.write("<hr>");
+        const weekDay = ["일","월","화","수","목","금","토"];
+
+        const totoDay = weekDay[day];
+        document.write(totoDay);
+
+        // let x = length + 6 + color + 10;
+        // document.write("<br>"+x+"<br>");
+
+
+        // const week = ["일","월","화","수","목","금","토"]
+        // document.write("오늘의 요일은 : "+week[2]+person.br)
+
+        // var name = "bathingape";
+        // document.write(name);
+        // var name = "javascript";
+        // document.write(name);
+        // name = "react";
+        // document.write(name);
+
+    </script>
+
+</body>
+</html>
