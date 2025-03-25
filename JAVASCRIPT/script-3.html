@@ -13,23 +13,25 @@
         let b = false;
 
         // && (두 값이 모두 "true"면 "true")
-        document.write(a && a);
+        document.write(a && a); //true
         document.write("<hr>");
-        document.write(a && b);
+        document.write(a && b); //false
         document.write("<hr>");
-        document.write(b && a);
+        document.write(b && a); //false
         document.write("<hr>");
-        document.write(b && b);
+        document.write(b && b); //false
+
         document.write("<hr>");
+        document.write("<hr>");
+
         // || (두 값 중 하나라도 "true"면 "true")
+        document.write(a || a); //true
+        document.write("<hr>"); 
+        document.write(a || b); //true
         document.write("<hr>");
-        document.write(a || a);
+        document.write(b || a); //true
         document.write("<hr>");
-        document.write(a || b);
-        document.write("<hr>");
-        document.write(b || a);
-        document.write("<hr>");
-        document.write(b || b);
+        document.write(b || b); // false
 
         document.write("<hr>");
         document.write("<hr>");
@@ -38,14 +40,14 @@
         // &= (비트 AND 연산자_둘 다 1일때 1, 나머지 0)
         let c = 5;
         c &= 3;
-        document.write(c);
+        document.write(c); // 1
 
         document.write("<hr>");
 
         // |= (비트 OR 연산자_둘 중 하나라도 1이면 1)
         let d = 5;
         d |= 3;
-        document.write(d);
+        document.write(d); // 7
 
         document.write("<hr>");
         document.write("<hr>");
@@ -53,15 +55,19 @@
         // &&= 예제 (왼쪽 값이 "true"일 경우에만, 오른쪽 값을 할당)
         let x = true;
         x &&= false;
-        document.write(x);
+        document.write(x); //false
+
         document.write("<hr>");
+
         let y = false;
         y &&= true;
-        document.write(y);
+        document.write(y); //false
+
         document.write("<hr>");
+
         let m = true;
         m &&= true;
-        document.write(m);
+        document.write(m); // true
 
         document.write("<hr>");
         document.write("<hr>");
@@ -69,11 +75,13 @@
         // ||= 예제 (왼쪽 값이 "false"일 경우에만, 오른쪽 값을 할당)
         let u = null;
         u ||= "hello";
-        document.write(u);
+        document.write(u); // hello
+
         document.write("<hr>");
+
         let p = "Hello";
         p ||= "world";
-        document.write(p);
+        document.write(p); // Hello
 
         document.write("<hr>");
         document.write("<hr>");
@@ -82,19 +90,23 @@
         // ^= (XOR 연산_두 비트가 다르면 1, 두 비트가 같으면 0)
         let s = 5;
         s ^= 3;
-        document.write(s);
+        document.write(s); // 6
 
-        
+        document.write("<hr>");
+        document.write("<hr>");
+
+
         // >>=, >>>= (오른쪽 시프트)
 
         // 양수일 경우
         let f = 8;
         f >>= 2;
         document.write(f);
-        document.write("<hr>");
+        document.write("<hr>"); // 2
+
         let g = 8;
         g >>>= 2;
-        document.write(g);
+        document.write(g); // 2
 
         document.write("<hr>");
         document.write("<hr>");
@@ -102,15 +114,89 @@
         // 음수일 경우
         let k = -8;
         k >>= 2;
-        document.write(k);
+        document.write(k); // -2
+
         document.write("<hr>");
+
         let h = -8;
         h >>>= 2;
-        document.write(h);
+        document.write(h); // 1073741822
 
 
         document.write("<hr>");
         document.write("<hr>");
+
+
+        /* &=, |=, ^=, &&=, ||=
+        이진법 -> binary number
+        이진법이 필요한 이유: 컴퓨터가 받고 인식하고 처리하는 모든 데이터들은
+        0과 1로 이루어져있어요
+        대표적인 data들을 얘기를 하자면, 문자열이나 숫자가 있겠죠?
+        숫자는 binary number 이진법을 사용하고
+        문자열은 ASCII code, 또는 Unicode 라는걸 사용합니다.
+        이진법이 뭐냐면
+        예를 들면  0부터 15라는 10진법 숫자를 2진법으로 바꿀수 있어요
+        예) 5 = 2^2 + 2^0 -> 이진법으로 환산하면 0101
+        0 0000
+        1 0001
+        2 0010
+        3 0011
+        4 0100
+        5 0101
+        6 0110
+        7 0111
+        8 1000
+        ~~~ 15: 1111
+        8 bit = 1byte
+        &= -> bitwise operator
+        a &= b -> a = a & b;
+        a |= b -> a = a | b;
+        a += b -> a = a + b;
+        & = AND, | = OR, ^ Exclusive OR
+        &
+        0 0 = 0
+        0 1 = 0
+        1 0 = 0
+        1 1 = 1
+        |
+        0 0 = 0
+        0 1 = 1
+        1 0 = 1
+        1 1 = 1
+        ^
+        0 0 = 0
+        0 1 = 1
+        1 0 = 1
+        1 1 = 0
+        */
+        //&=
+        let a_1 = 5; //5 = 0101
+        a_1 &= 3; //0011
+        document.write(a_1 + "<br>"); //0001 -> decimal 10진수로 1
+        //|=
+        let a_2 = 6; //6 = 0110
+        a_2 |= 2; //2 = 0010
+        document.write(a_2 + "<br>"); //0110 -> decimal 10진수로 환산 6
+        //^=
+        let a_3 = 7; //7 = 0111
+        a_3 ^= 3; //3 = 0011
+        document.write(a_3 + "<br>"); //0100 -> decimal 10진수로 환산하면 4
+        //&&=, ||= Logical Bitwise operator
+        //모든 프로그래밍 언어에는 데이터 타입들이 존재하는데
+        //String (문자열), Number (숫자), Boolean (불리언) -> true, false
+        //Falsy value: 0, "", null, undefined, NAN
+        //Truthy value: 1, 2.5, -10, "Hello"
+        //10이 a_4에 저장되어 있음
+        //10은 true 값이에요
+        //만약 저장되어 있는 값이 true 값이면
+        // 그 다음에 재선언한 값을 그대로 저장해서 프린트 해줘요
+        let a_4 = true;
+        a_4 &&= 5; //a_4 = a_4 (true) && 5 -> 5가 프린트됌
+        document.write(a_4 + "<br>"); //5
+        //||= -> 그냥 위에 꺼에 완전 반대에요
+        let a_5 = null;
+        a_5 ||= 4; //a_5 = a_5 (null) || 4 -> 4가 프린트됌
+        document.write( + "<br>") //4;
 
 
     </script>
