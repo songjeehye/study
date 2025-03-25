@@ -4,7 +4,7 @@
 body{
     font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 
-    background: url('../images/main_background.jpg') no-repeat;
+    background: url('../images/main_background.jpg') no-repeat center;
     background-size: cover;
 
     min-height: 100vh;
@@ -30,20 +30,15 @@ img{
     height: 100%;
 }
 
-/* responsive
-element*6
-width = pc >> 6*1
-width = 1200 >> 3*2
-width = 720 >> 2*3  */
 
 section{
-    padding: min(50px, 5%);
+    padding: 80px 38.4px;
 }
 
 .grid-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
-    gap: 20px;
+    gap: 8px;
 }
 
 .d-flex{
@@ -61,6 +56,63 @@ section{
     padding: 25px;
     background: rgba(255, 255, 255, .25);
     backdrop-filter: blur(10px);
+
+    border: 3px solid;
+    border-image: linear-gradient(135deg, rgba(255, 254, 248, .8) 0%, rgba(155, 155, 155, .4) 20%, rgba(255, 255, 255, .8) 50%, rgba(155, 155, 155, .4) 100%) 1;
 }
 
-/*반응형만 잡으면 됨 추가로 보더...그라디언트 확인....*/
+
+@media(max-width:1200px){
+    .grid-container{
+        grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+        gap: 30px;
+    }
+    section{
+        padding: 60px 40px;
+    }
+    .d-flex{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .d-flex-r{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .box{
+        padding: 28px;
+    }
+    h3{
+        font-size: 22px;
+    }
+    p{
+        font-size: 17px;
+    }
+}
+@media(max-width:720px){
+    .grid-container{
+        grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+        gap: 20px;
+    }
+    section{
+        padding: 60px 20px;
+    }
+    .box{
+        padding: 24px;
+    }
+    .d-flex{
+        gap: 30px;
+    }
+    .d-flex-r{
+        gap: 30px;
+    }
+    h3{
+        font-size: 18px;
+    }
+    p{
+        font-size: 15px;
+    }
+}
+
+/* 원 사이트는 screen width 값이 늘어날수록 폰트 크기, 박스 크기, 패딩 값 등이 조절되는데 이건 px 단위가 아닌 vw와 같은 단위의 차이인가요? */
