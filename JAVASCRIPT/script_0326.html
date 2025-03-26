@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript_0326</title>
+</head>
+<body>
+    <p id="demo">여러분들이 너무 잘해서 좋아효:)</p>
+
+    <script>
+
+        // let today = new Date();
+        // let hour = today.getHours();
+        
+        // if(hour == 12){ 
+        //     alert("점심시간 입니다.");
+        // } else {
+        //     alert("점심시간 아닙니다.")
+        // }
+        //무조건적 일치 "==", "="을 쓸 경우 비슷한값 또한 true로 받아들임
+        // if: 만약에~ >> else: 그렇지않으면~
+
+        // if(hour < 10){ 
+        //     alert("good morning!");
+        // } else if(hour < 20) {
+        //     alert("good afternoon!");
+        // } else{
+        //     alert("good night!");
+        // }
+        // else에도 if를 적용하여 조건문 확장
+
+        // const now = new Date();
+        // const hours = now.getHours();
+        // const minutes = now.getMinutes();
+
+        // if((hours===10 && minutes>=0) || (hours===11) || (hours===12 && minutes<50)){
+        //     alert("지금은 공부하는 시간입니다.");
+        // } else if(hour===12 && minute>=50){
+        //     alert("지금은 점심시간 입니다.");
+        // } else{
+        //     alert("잠을 안자고 공부하는 시간입니다.");
+        // }
+        // hours===10 && minutes >=0 : 10시 0분 ~ 10시 59분까지
+        // hours===11 : minute와 관계없이 11시면 전부
+        // hours===12 && minutes<50 : 12시 49분까지
+
+        // const day = now.getDay();
+
+        // if(day===0){
+        //     alert("homework")
+        // } else if(day===1){
+        //     alert("more caffein")
+        // } else if(day===2){
+        //     alert("more more caffein")
+        // } else if(day===3){
+        //     alert("I want sleeping")
+        // } else if(day===4){
+        //     alert("recycling day")
+        // } else if(day===5){
+        //     alert("refresh day")
+        // } else{
+        //     alert("sleeping")
+        // }
+        
+        // const score = Number(prompt("점수 입력"));
+
+        // if(score >= 90){
+        //     alert("A학점 입니다!");
+        // } else if((score >= 80) && (score < 90)){
+        //     alert("B학점 입니다!");
+        // } else if((score >= 70) && (score < 80)){
+        //     alert("C학점 입니다!");
+        // } else if((score >= 60) && (score < 70)){
+        //     alert("D학점 입니다!");
+        // } else{
+        //     alert("F학점 입니다!");
+        // }
+        // &&를 굳이 쓸 필요가 없었네!
+
+        // if(score >= 90){
+        //     alert("A학점 입니다!");
+        // } else if(score >= 80){
+        //     alert("B학점 입니다!");
+        // } else if(score >= 70){
+        //     alert("C학점 입니다!");
+        // } else if(score >= 60){
+        //     alert("D학점 입니다!");
+        // } else{
+        //     alert("F학점 입니다!");
+        // }
+
+
+        // const id = prompt("ID 입력");
+        // const pw = prompt("pw 입력");
+
+        // if(id === "admin" && pw === "1234"){
+        //     alert("로그인 성공!");
+        // } else if(id === "admin"){
+        //     alert("비밀번호가 틀렸습니다.");
+        // } else{
+        //     alert("아이디가 존재하지 않습니다.");
+        // }
+
+        // if(id === "admin" && pw === "1234"){
+        //     alert("로그인 성공!");
+        // } else if(id === "admin" && pw != "1234"){
+        //     alert("비밀번호가 틀렸습니다.");
+        // } else if(id != "admin" && pw ==="1234"){
+        //     alert("아이디가 존재하지 않습니다.");
+        // }
+        // >> 부정문을 쓰는게 정석입니다!
+
+
+
+
+
+        // -----------------문제1
+        // const age = Number(prompt("나이를 입력해주세요."));
+        // if(age >= 18){
+        //     alert("입장 가능합니다!");
+        // } else if(age >= 13){
+        //     alert("보호자 동반이 필요합니다!");
+        // } else{
+        //     alert("입장할 수 없습니다!");
+        // }
+
+
+
+        // -----------------문제2
+        // const a = Number(prompt("첫번째 숫자를 입력해주세요."))
+        // const b = Number(prompt("두번째 숫자를 입력해주세요."))
+        // const c = Number(prompt("세번째 숫자를 입력해주세요."))
+
+        // if((a > b) && ( a > c)){
+        //     alert(a)
+        // } else if((b > a) && (b > c)){
+        //     alert(b)
+        // } else if((c > a) && (c > b)){
+        //     alert(c)
+        // }
+
+        // 선생님 정답
+        // const num1 = Number(prompt("첫 번째 숫자를 입력하세요:"));
+        // const num2 = Number(prompt("두 번째 숫자를 입력하세요:"));
+        // const num3 = Number(prompt("세 번째 숫자를 입력하세요:"));
+        // let max = num1; // 처음에는 첫 번째 숫자가 가장 크다고 가정
+        // if (num2 > max) {
+        // max = num2; // num2가 더 크면 max를 num2로 변경
+        // }
+        // if (num3 > max) {
+        // max = num3; // num3가 더 크면 max를 num3로 변경
+        // }
+        // alert("가장 큰 숫자는 " + max + " 입니다!");
+
+
+        // -----------------문제3
+        // const age = Number(prompt("나이를 입력해주세요."));
+
+        // if(age >= 65){
+        //     alert("무료입니다!");
+        // } else if(age >= 19){
+        //     alert("성인 요금은 1000원입니다!");
+        // } else if(age >= 8){
+        //     alert("청소년 요금은 500원입니다!");
+        // } else{
+        //     alert("무료입니다!");
+        // }
+
+        // 선생님 정답
+        // const age = Number(prompt("나이를 입력하세요:"));
+        // if (age <= 7 || age >= 65) {
+        //     alert("무료입니다!");
+        // } else if (age >= 8 && age <= 18) {
+        //     alert("청소년 요금은 500원입니다!");
+        // } else {
+        //     alert("성인 요금은 1000원입니다!");
+        // }
+
+
+        // -----------------문제4
+        // const money1 = Number(prompt("현재 잔액을 입력해주세요."));
+        // const money2 = Number(prompt("출금 금액을 입력해주세요."));
+
+        // if(money1 >= money2){
+        //     alert("출금이 완료되었습니다!");
+        // } else if(money2 > money1){
+        //     alert("잔액이 부족합니다!");
+        // }
+
+        // 선생님 정답
+        //const balance = Number(prompt("현재 잔액을 입력하세요:"));
+        // const withdraw = Number(prompt("출금할 금액을 입력하세요:"));
+        // if (withdraw > balance) {
+        //     alert("잔액이 부족합니다!");
+        // } else {
+        //     alert("출금이 완료되었습니다! 남은 잔액: " + (balance - withdraw) + "원");
+        // }
+
+
+
+        // ----------------------------
+        // const num = Number(prompt("숫자를 입력해주세요."))
+
+        // if((num % 2) === 0){
+        //     alert("짝수입니다.")
+        // } else{
+        //     alert("홀수입니다.")
+        // }
+
+
+        // ----------------------------
+        // const price = Number(prompt("물건 가격"))
+        // const quantity = Number(prompt("구매 수량"))
+        // const total = price*quantity
+
+        // if(quantity >= 10){
+        //     alert("총 금액은 " + (total-(total*0.1)) + "원 입니다.")
+        // } else{
+        //     alert("총 금액은 " + total + "원 입니다.")
+        // }
+
+        // 선생님은
+        let price = 5000;
+        let quantity = 15;
+        let total = price*quantity
+
+        if (quantity >= 10){
+            total = total*0.9
+        }
+        document.write(`총 금액 : ${total}원`)
+        //document.write("총 금액 :" + total + "원") >> 이게 기초 버전
+
+
+        // ----------------------------
+        // const month = Number(prompt("'숫자'월을 입력하세요."))
+
+        // if((month >= 3) && (month <= 5)){
+        //     alert("봄")
+        // } else if((month >= 6) && (month <= 8)){
+        //     alert("여름")
+        // } else if((month >= 9) && (month <= 11)){
+        //     alert("가을")
+        // } else{
+        //     alert("겨울")
+        // }
+
+        //선생님은
+        // let month = 7; // 예시 입력
+        // let season;
+        // if (month >= 3 && month <= 5) {
+        // season = "봄";
+        // }
+        // if (month >= 6 && month <= 8) {
+        // season = "여름";
+        // }
+        // if (month >= 9 && month <= 11) {
+        // season = "가을";
+        // }
+        // if (month === 12 || month === 1 || month === 2) {
+        // season = "겨울";
+        // }
+
+    </script>
+
+</body>
+</html>
