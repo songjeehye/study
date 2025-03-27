@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // for 반복문
+        // 동작을 여러번 수행할 때, 작동하는 문법
+        // 예를 들어 "안녕하세요" 텍스트를 5번 이상 출력하고 싶을 때!
+        // 사용 방법 : for(초기값; 조건; 증가값 또는 감소값){}
+
+        // for(let i=1; i<=5; i++){
+        //     document.write("안녕하세요" + i);
+        // }
+        // document.write("<hr>");
+
+
+        // let sum=0; //합계를 저장할 변수
+
+        // for(let a=1; a<=10; a++){
+        //     sum += a;
+        // }
+        // document.write("1부터 10까지의 합 :" + sum);
+        // document.write("<hr>");
+
+        // const fruits = ["사과", "바나나", "포도"];
+        // // 배열 fruits[0]~[2] 생성
+        // for(let f=0; f<fruits.length; f++){
+        //     // length = 문자열을 숫자로 반환해줌 (배열에 숫자를 반환)
+        //     // fruits.length = 2
+        //     document.write(fruits[f]);
+        // }
+        // document.write("<hr>");
+
+        // for(let c=1; c<=9; c++){
+        //     document.write("2X" + c + "=" + (2*c) + "<br>");
+        // }
+        // document.write("<hr>");
+
+        // 문제 : 1~100까지 짝수만 출력해주세요.
+        // for(let h=1; h<=100; h++){
+        //     if((h%2) === 0){
+        //         document.write(h + "<br>")
+        //     }
+        // }
+        // document.write("<hr>");
+        // // 선생님 답
+        // for(let d=2; d<=100; d+=2){
+        //     document.write(d+"<br>");
+        // }
+        // document.write("<hr>");
+        //문제 : 50부터 역순으로 나열하세요.
+        // for(let g=50; g>=50; g--){
+        //     document.write(g + "<br>");
+        // }
+        //선생님 답
+        // for(let v=50; v>=1; v--){
+        //     document.write(v + "<br>");
+        // }
+
+        // document.write("<hr>");
+
+
+        // // 문제 구구단 3단 만들기, 백틱쓰세요!
+        // for(let q=1; q<=9; q++){
+        //     document.write(`3 X ${q} = ${3*q} <br>`);
+        // }
+
+        // document.write("<hr>");
+
+        // 전제조건 2씩 증가하지만 2의 배수를 100까지 더한 값
+        // for(let m=2; m<=100; m+=2){
+        //     document.write(m += m);
+        // }
+        // 선생님 답
+        // let sum2 = 0;
+        // for(let s=2; s<=100; s+=2){
+        //     sum2 += s;
+        // }
+        // document.write("2의 배수 합계 : " + sum2)
+
+        // document.write("<hr>"); // 밑에 또다른 방법
+        // let sum3 = 0;
+        // for(let z=1; z<=100; z++){
+        //     if(z % 2 === 0){
+        //         sum3 += z
+        //     }
+        // }
+        // document.write("2의 배수 합계 : " + sum3)
+
+
+        // for(let dan=2; dan<=9; dan++){
+        //     document.write(dan + "단" + "<br>");
+        //     // 2~9 증가 (구구단 2~9단)
+        //     for(let y=1; y<=9; y++){
+        //         document.write(dan + "X" + y + "=" + (dan * y) + "<br>");
+        //         // dan(2~9) + "x" + y + "=" + (dan*y)
+        //     }
+        // }
+
+        // document.write("<hr>");
+        
+        for(let row=1; row<=5; row++){
+            let stars = "<br>";
+            for(let col=1; col<=5; col++){
+                stars += "*";
+                document.write(stars);
+            }
+        }
+        // for(let r=1; r<=5; r++){
+        //     let stars = "<br>";
+        //     for(let c=1; c<=r; c++){
+        //         stars += "*";
+        //     }
+        //     document.write(stars);
+        // }
+        
+
+    </script>
+
+</body>
+</html>
