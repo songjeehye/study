@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+
+        // const scores = [85, 92, 68, 77];
+
+        // for(let i = 0; i<scores.length; i++){
+        //     if(scores[i] >= 90){
+        //         document.write(`${scores[i]}점 -> A등급 <br>`);
+        //     } else if(scores[i] >= 80){
+        //         document.write(`${scores[i]}점 -> B등급 <br>`);
+        //     } else if(scores[i] >= 70){
+        //         document.write(`${scores[i]}점 -> C등급 <br>`);
+        //     } else{
+        //         document.write(`${scores[i]}점 -> F등급 <br>`);
+        //     }
+        // }
+
+
+        // document.getElementById("demo").innerHTML =
+        // "<p><b>Math.E:</b>" + Math.E + "</p>" +
+        // "<p><b>Math.PI:</b>" + Math.PI + "</p>" +
+        // "<p><b>Math.SQRT2:</b>" + Math.SQRT2 + "</p>" +
+        // "<p><b>Math.SQRT1_2:</b>" + Math.SQRT1_2 + "</p>" +
+        // "<p><b>Math.LN2:</b>" + Math.LN2 + "</p>" +
+        // "<p><b>Math.LN10:</b>" + Math.LN10 + "</p>" +
+        // "<p><b>Math.LOG2E:</b>" + Math.LOG2E + "</p>" +
+        // "<p><b>Math.Log10E:</b>" + Math.LOG10E + "</p>" +
+
+        // // 밑에서 부터는 실무에서도 쓰여요!
+        // "<p><b>Math.round:</b>" + Math.round(4.6) + "</p>" +
+        // // 반올림
+        // "<p><b>Math.ceil:</b>" + Math.ceil(4.4) + "</p>" +
+        // // 올림
+        // "<p><b>Math.floor:</b>" + Math.floor(-4.4) + "</p>" +
+        // // 내림
+        // "<p><b>Math.Pow:</b>" + Math.pow(8, 4) + "</p>" +
+        // // 거듭제곱
+        // "<p><b>Math.abs:</b>" + Math.abs(-4.2) + "</p>" +
+        // // 절대 값
+        // "<p><b>Math.min:</b>" + Math.min(0, 150, 30, -8) + "</p>" +
+        // // 최소 값
+        // "<p><b>Math.max:</b>" + Math.max(0, 150, 30, -8) + "</p>" +
+        // // 최대 값
+        // "<p><b>Math.random:</b>" + Math.random() + "</p>";
+        // // 0~1 사이의 난수 무작위 도출
+
+
+        // const today = new Date();
+        // // 현재 날짜
+        // const targetDate = new Date('2021-05-05');
+        // // 날짜
+
+        // const diffTime = targetDate - today;
+        // //밀리초 단위 차이 계산
+
+        // const diffDays = Math.ceil(diffTime/(1000*60*60*24));
+        // const days = Math.abs(diffDays);
+
+        // document.write(`호랑말코와 함께한 시간 ${days}일 입니다.`)
+
+
+        // const today = new Date();
+        // // 지금 날짜와 시간 저장
+        // // const targetDate = new Date('2025-05-05');
+        // // 목표 날짜 저장
+        // const diffTime = targetDate - today;
+        // // 목표 날짜에서 오늘날짜 밀리초 단위로 남은 시간 계산
+        // const diffDays = Math.ceil(diffTime/(1000*60*60*24));
+        // // 밀리초를 일(day) 단위로 바꾸는 값 (1000ms*60초*60분*24시간) + 올림
+
+        // document.write(`호랑말코와의 4주년까지 남은 날은 ${diffDays}일 입니다.`)
+
+
+        // const today = new Date();
+        // const targetDate = new Date(prompt('날짜를 입력해주세요.'));
+        // const diffTime = targetDate - today;
+        // const diffDays = Math.ceil(diffTime/(1000*60*60*24));
+
+        // alert(`남은 날짜는 ${diffDays}일 입니다.`)
+
+
+        // 오늘이 주말인지 알아보기
+        const today = new Date();
+        const day = today.getDay();
+
+        // for(let weekDay = 0; weekDay<day; weekDay++){
+        //     if(weekDay === 0 && weekDay === 6){
+        //         document.write(`오늘은 주말입니다.`);
+        //     }
+        //     else{
+        //         document.write(`오늘은 평일입니다.`);
+        //     }
+        // }
+
+        // 선생님 답
+        if(day === 0 || day ===6){
+            console.log("오늘은 주말입니다.");
+        }   else{
+            console.log("오늘은 평일입니다.");
+        }
+        
+
+        // 지금이 오전인지 오후인지 알아보기
+        const times = today.getHours();
+        // 위에 뉴데이트 한번, 요거 한번 따로 선언해도 되고
+        // const times = new Date().getHours();
+        // 이렇게 한줄로 한번에 선언해도 됨
+        if(times < 12){
+            document.write("좋은 아침!")
+        }   else{
+            document.write("오후 입니다.")
+        }
+
+
+        const month = today.getMonth();
+        const randomMonth = Math.round(Math.random()*12);
+
+        if(month === randomMonth){
+            document.write(`특별 메세지`);
+        }
+
+
+    </script>
+</body>
+</html>
