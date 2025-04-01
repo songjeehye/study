@@ -1,14 +1,14 @@
 :root{ /*차세대 css*/
     --header-height: 3.5rem;
     --white-color: hsl(0, 0%, 100%);
-    --balck-color: hsl(0, 0%, 0%);
+    --black-color: hsl(0, 0%, 0%);
 
     --h1-font-size: 1.5rem;
     --normal-font-size: .938rem;
     --font-regular: 400;
     --font-medium: 500;
 
-    --ztooltip: 10;
+    --z-tooltip: 10;
     --z-fixed: 100;
 
 
@@ -50,7 +50,7 @@
     width: 100%;
     top: 0;
     left: 0;
-    background-color: var(--balck-color);
+    background-color: var(--black-color);
     z-index: var(--z-fixed);
 }
 .nav{
@@ -74,16 +74,17 @@
 
 
 /* navigation for mobile devices */
-@media screen and(max-width:1150px){
+@media screen and (max-width:1150px){
     .nav__menu{
         position: fixed;
         left: 0;
         top: 0;
-        background-color: var(--balck-color);
+        background-color: var(--black-color);
         width: 100%;
         height: 100%;
         padding: 6rem 3.5rem 4.5rem;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         transition: left .4s;
     }
@@ -122,3 +123,46 @@
 visibility: hidden; >> 자기 자리를 지키면서 보이지만 않음 
 display: none; >> 자기 자리를 지키지 않으면서 아예 사라짐
 */
+
+.nav__link span::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--white-color);
+    transition: width .3s ease-out;
+}
+.nav__link:hover span{
+    margin-left: 2.5rem;
+}
+.nav__link:hover i{
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav__link:hover span::after{
+    width: 100%;
+}
+.nav__list:has(.nav__link:hover) .nav__link:not(:hover){
+    opacity: .4;
+}
+
+.nav__close{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+}
+
+.nav__social{
+    column-gap: 1rem;
+}
+.nav__social-link{
+    color: var(--white-color);
+    font-size: 1.5rem;
+    transition: transform .4s;
+}
+.nav__social-link:hover{
+    transform: translateY(-.5rem);
+}
