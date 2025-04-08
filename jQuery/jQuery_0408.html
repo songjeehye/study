@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .tab-header ul{
+            display: flex;
+            list-style: none;
+        }
+        .tab-header li{
+            width: 20%;
+        }
+        .tab-content-1{
+            background-color: palevioletred;
+        }
+        .tab-content-2{
+            background-color: wheat;
+            display: none;
+        }
+        .tab-content-3{
+            background-color: cadetblue;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab-content">
+        <div class="tab-header">
+            <ul>
+                <li class="tab1">
+                    <a href="#">Tab1</a>
+                </li>
+                <li class="tab2">
+                    <a href="#">Tab2</a>
+                </li>
+                <li class="tab3">
+                    <a href="#">Tab3</a>
+                </li>
+            </ul>
+        </div>
+        <div class="tab-body">
+            <div class="tab-content-1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, pariatur alias, iure consequatur ducimus corrupti possimus, nesciunt est recusandae quibusdam rerum nam dolorum repudiandae maiores molestias.
+            </div>
+            <div class="tab-content-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, pariatur alias, iure consequatur ducimus corrupti possimus, nesciunt est recusandae quibusdam rerum nam dolorum repudiandae maiores molestias.
+            </div>
+            <div class="tab-content-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, pariatur alias, iure consequatur ducimus corrupti possimus, nesciunt est recusandae quibusdam rerum nam dolorum repudiandae maiores molestias.
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".tab1").click(function(){
+                $('.tab-content-1').css('display','block');
+                $('.tab-content-2').css('display','none');
+                $('.tab-content-3').css('display','none');
+            })
+            $(".tab2").click(function(){
+                $('.tab-content-1').css('display','none');
+                $('.tab-content-2').css('display','block');
+                $('.tab-content-3').css('display','none');
+            })
+            $(".tab3").click(function(){
+                $('.tab-content-1').css('display','none');
+                $('.tab-content-2').css('display','none');
+                $('.tab-content-3').css('display','block');
+            })
+        })
+    </script>
+</body>
+</html>
