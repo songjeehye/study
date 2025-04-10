@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .accordion{
+            background-color: #999999;
+        }
+        .accordion ul>li{
+            overflow: hidden;
+            max-height: 40px;
+            transition: .3s;
+        }
+
+        .accordion ul>li.on{
+            max-height: 600px;
+        }
+        .accordion ul>li .title{
+            background-color: antiquewhite;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            padding-left: .5rem;
+        }
+        .accordion ul>li .desc{
+            padding: .5rem;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="accordion">
+            <ul>
+                <li class="on">
+                    <div class="title"><span>제목1</span> <i>화살표</i></div>
+                    <div class="desc">내용1</div>
+                </li>
+                <li>
+                    <div class="title"><span>제목2</span> <i>화살표</i></div>
+                    <div class="desc">내용2</div>
+                </li>
+                <li>
+                    <div class="title"><span>제목3</span> <i>화살표</i></div>
+                    <div class="desc">내용3</div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        const accordion = document.querySelector(".accordion");
+        function toggleAccordion(){
+            const clickedItem = this.parentNode;
+            const items = accordion.querySelectorAll("li");
+
+            items.forEach((item)=>{
+                if(clickedItem===item){
+                    item.classList.toggle('on');
+                } else{
+                    item.classList.remove('on');
+                }
+            })
+        }
+        const titles = accordion.querySelectorAll('.title');
+        titles.forEach((title)=>{
+            title.addEventListener('click', toggleAccordion);
+        });
+    </script>
+</body>
+</html>

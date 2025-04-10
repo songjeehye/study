@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACCORDION</title>
+    <style>
+        .faq{
+            width: 480px;
+            border-bottom: 1px solid #c4c4c4;
+        }
+        .faq h3{
+            background: #e9e7e7;
+            margin: 0;
+            padding: 7px 15px;
+            border: 1px solid #c4c4c4;
+            border-bottom: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .faq p{
+            background: #f7f7f7;
+            margin: 0;
+            padding: 10px 15px 20px;
+            border-left: 1px solid #c4c4c4;
+            border-right: 1px solid #c4c4c4;
+        }
+
+        /* .faq-title{
+            border-bottom: 1px solid #ccc;
+        }
+        .faq-body{
+            display: none;
+        } */
+    </style>
+</head>
+<body>
+
+    <div class="faq">
+        <h3>Question one Sample Text 1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea rem explicabo ducimus voluptas atque. Qui ex ut doloremque molestiae eum laudantium in expedita! Ducimus porro vitae, corrupti dignissimos adipisci sunt sit dicta aspernatur consequuntur qui nemo officia vel harum repudiandae praesentium.</p>
+        <h3>Question one Sample Text 2</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea rem explicabo ducimus voluptas atque. Qui ex ut doloremque molestiae eum laudantium in expedita! Ducimus porro vitae, corrupti dignissimos adipisci sunt sit dicta aspernatur consequuntur qui nemo officia vel harum repudiandae praesentium.</p>
+        <h3>Question one Sample Text 3</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea rem explicabo ducimus voluptas atque. Qui ex ut doloremque molestiae eum laudantium in expedita! Ducimus porro vitae, corrupti dignissimos adipisci sunt sit dicta aspernatur consequuntur qui nemo officia vel harum repudiandae praesentium.</p>
+    </div>
+
+    <!-- <div class="faq-all">
+        <div class="faq">
+            <h2 class="faq-title faq1">지금 코딩이 좋으신가요?</h2>
+            <div class="faq-body faqBody1">
+                <p>지금 코딩이 너무 재밌습니다. 그렇지만...</p>
+            </div>
+        </div>
+        <div class="faq">
+            <h2 class="faq-title faq2">지금 코딩이 좋으신가요?</h2>
+            <div class="faq-body faqBody2">
+                <p>지금 코딩이 너무 재밌습니다. 그렇지만...</p>
+            </div>
+        </div>
+        <div class="faq">
+            <h2 class="faq-title faq3">지금 코딩이 좋으신가요?</h2>
+            <div class="faq-body faqBody3">
+                <p>지금 코딩이 너무 재밌습니다. 그렇지만...</p>
+            </div>
+        </div>
+    </div> -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('.faq p').hide();
+            $('.faq h3').click(function(){
+                $(this).next('p').slideToggle('slow').siblings('p:visible').slideUp('slow');
+            }) // 지금 클릭한거 다음 요소 토글로 작동하고, siblings(같은 부모의 형제들, 나빼고) visible(display none 비슷)해줘
+        })
+
+
+        // $(function(){
+        //     $('.faq1').click(function(){
+        //         $('.faqBody1').slideToggle()
+        //     })
+        //     $('.faq2').click(function(){
+        //         $('.faqBody2').slideToggle()
+        //     })
+        //     $('.faq3').click(function(){
+        //         $('.faqBody3').slideToggle()
+        //     })
+        // })
+    </script>
+</body>
+</html>
