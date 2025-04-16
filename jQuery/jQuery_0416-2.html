@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 0;
+            color: blue;
+            gap: 0 30px;
+        }
+        header{
+            background-color: #fff;
+            position: fixed;
+            width: 100%;
+        }
+        .background-on{
+            background-color: aquamarine;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        section{
+            height: 100vh;
+        }
+        #sec01{
+            background-color: antiquewhite;
+        }
+        #sec02{
+            background-color: brown;
+        }
+        #sec03{
+            background-color: skyblue;
+        }
+        #sec04{
+            background-color: khaki;
+        }
+        #sec05{
+            background-color: chocolate;
+        }
+
+        .header{
+            width: 100%;
+            height: 80px;
+            position: fixed;
+            left: 0;
+            top: -80px;
+            z-index: 9999;
+        }
+        header.fixed{
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="#sec01">sec01</a></li>
+            <li><a href="#sec02">sec02</a></li>
+            <li><a href="#sec03">sec03</a></li>
+            <li><a href="#sec04">sec04</a></li>
+            <li><a href="#sec05">sec05</a></li>
+        </ul>
+    </header>
+    <section id="sec01"></section>
+    <section id="sec02"></section>
+    <section id="sec03"></section>
+    <section id="sec04"></section>
+    <section id="sec05"></section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        // $(window).on('scroll'), function(){
+        //     let scrollTop = $(this).scrollTop();
+        //     let lastScroll = scrollTop;
+
+        //     if(scrollTop > lastScroll){
+        //         $('header').removeClass('fixed');
+        //     } else{
+        //         $('header').addClass('fixed');
+        //     }
+        // }
+
+        $(window).on('scroll', function(){
+            const scroll = $(window).scrollTop();
+            const header = $('header');
+
+            if(scroll > 500){
+                $('header').hide();
+            } else if(scroll => 2000){
+                $('header').slideDown();
+            }
+        })
+
+    </script>
+</body>
+</html>
