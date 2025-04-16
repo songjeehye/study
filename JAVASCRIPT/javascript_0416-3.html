@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: slategray;
+        }
+    </style>
+</head>
+<body>
+    <h2>회원 혜택 계산기</h2>
+    <select class="grade">
+        <option value="VIP">VIP</option>
+        <option value="Gold">Gold</option>
+        <option value="Silver">Silver</option>
+    </select>
+    <input type="number" class="amount" placeholder="구매 금액 입력 (숫자만)">
+    <button onclick="benefits()">혜택 확인</button>
+    <div class="result"></div>
+
+
+    <script>
+        function benefits(){
+            const grade = document.querySelector('.grade').value;
+            const amount = Number(document.querySelector('.amount').value);
+            // parentInt : 무조건 숫자로 반환
+            // const amount = document.querySelector('.amount').value;
+            let message = "";
+
+            if(grade === "VIP" && amount >= 100000){
+                message += "개 큰 박수";
+            } else if(grade === "Gold" && amount >= 70000){
+                message += "소소한 박수";
+            } else if(grade === "Silver" && amount >= 30000){
+                message += "좀 더 쓰세염";
+            } else{
+                message += "짜이찌엔";
+            }
+
+            document.querySelector('.result').innerHTML = message;
+        }
+    </script>
+</body>
+</html>

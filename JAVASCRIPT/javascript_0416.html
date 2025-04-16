@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        li{
+            list-style: none;
+            border-bottom: 1px solid steelblue;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>회원목록리스트</h2>
+    <ul class="userList"></ul>
+    <button onclick="renderUsers()">회원목록불러오기</button>
+
+    <script>
+
+        const users = ["미영", "지선", "현수", "채은", "지우"];
+
+        function renderUsers(){
+            const userList = document.querySelector('.userList');
+
+            for(let i = 0; i < users.length; i++){
+                const li = document.createElement("li");
+                li.textContent = `${i+1}번째    사용자 : ${users[i]}`;
+                userList.appendChild(li);
+            }
+        }
+
+        // 자바스크립트란?
+        // 웹 페이지에 생동감을 넣어주는 동적 프로그램 언어
+        // 자바스크립트에서 변수는 var, let, const가 있다.
+        // var: ES5일 때 자주 사용하던 변수이지만 현재는 사용하지 않음
+        // let, const: ES6 변수로 가장 자주 사용
+        // let = ver와 같이 재할당이 가능하다.
+        // const는 재할당이 불가능하다. 선언 당시 초기값을 변경할 수 없다.
+        // text는 웬만하면 "", 숫자는 웬만하면 ''
+
+        // let age = 25;
+        // age = 30;
+        // console.log(age);
+
+        // // const name = "alice";
+        // // name = "bob";
+        // // console.log(name);
+
+        // // 배열 쓰는 방법 (배열은 바뀌면 안되니까!)
+        // const users = ["미영", "지선", "현수", "채은", "지우"];
+
+        // // document.write(users[0]);
+        // // document.write(users[1]);
+        // // document.write(users[2]);
+        // // document.write(users[3]);
+        // // document.write(users[4]);
+        // // 위에 있는걸 for문으로 쓰면 밑에 꺼
+        // for(let i = 0; i < users.length; i++){
+        //     // document.write(users[i] + "<br>");
+        //     // document.write(i + 1 + "번째   사용자 : " +users[i] + "<br>");
+        //     document.write(`${i+1}번째  사용자 : ${users[i]}<br>`);
+        // }
+
+        // const cart = [15000, 30000, 12000, 8900];
+        // let total = 0;
+
+        // for(let i = 0; i < cart.length; i++){
+        //     total += cart[i];
+        // };
+
+        // document.write(`총 금액 ${total}원`);
+
+
+
+    </script>
+</body>
+</html>
